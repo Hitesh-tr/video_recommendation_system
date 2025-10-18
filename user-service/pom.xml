@@ -8,11 +8,11 @@
 		<version>3.5.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.recommendation-system-backend</groupId>
-	<artifactId>video-platform</artifactId>
+	<groupId>com.recommendation-system</groupId>
+	<artifactId>user-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>video-platform</name>
-	<description>Video recommendation system backend youtube style</description>
+	<name>user-service</name>
+	<description>Video recommendation system backend YouTube style</description>
 	<url/>
 	<licenses>
 		<license/>
