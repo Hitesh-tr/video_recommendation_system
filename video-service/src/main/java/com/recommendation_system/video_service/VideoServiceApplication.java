@@ -1,13 +1,13 @@
-package com.recommendation_system_backend.video_platform;
+package com.recommendation_system.video_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VideoPlatformApplication {
+public class VideoServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VideoPlatformApplication.class, args);
+		SpringApplication.run(VideoServiceApplication.class, args);
 	}
 
 }
