@@ -1,4 +1,4 @@
-package com.recommendation_system_backend.video_platform.controller;
+package com.recommendation_system.user_service.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
