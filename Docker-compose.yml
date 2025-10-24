@@ -9,6 +9,11 @@ services:
       - "3306:3306"
     networks:
       - backend
+    healthcheck:
+      test: [ "CMD-SHELL", "mysqladmin ping -h localhost -uroot -prootpassword | grep 'mysqld is alive' || exit 1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.5.3
@@ -62,6 +67,19 @@ services:
     depends_on:
       - mysql
       - kafka
+    networks:
+      - backend
+
+  analytics-service:
+    build: ./analytics-service
+    container_name: analytics-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      kafka:
+        condition: service_started
     networks:
       - backend
 
